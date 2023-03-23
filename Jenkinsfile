@@ -11,10 +11,10 @@ pipeline {
         stage('Build') {
             steps {
 
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git 'https://github.com/kliakos/sparkjava-war-example.git'
 
 
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn clean test package"
 
             }
 
